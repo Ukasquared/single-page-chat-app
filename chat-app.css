@@ -1,0 +1,240 @@
+/* base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 0.8rem;
+}
+
+/* variables */
+:root {
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --Dark-pink: hsl(0, 60%, 75%);
+  --light-pink: hsl(0, 81%, 94%);
+  --dark-grey: hsl(0, 2%, 90%);
+  --light-grey: hsl(270, 20%, 96%);
+  --darker-grey: rgba(218, 215, 216, 0.4);
+  --white: hsl(0, 0%, 100%);
+  --brightened-black: hsl(0, 1%, 42%);
+  --Moderate-Violet: hsl(268, 24%, 88%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+}
+
+.container {
+  /* 1rem = 1em = 16px, 1200px = 75rem */
+  max-width: 75rem;
+  margin: 0 auto;
+  background: var(--darker-grey);
+  position: relative;
+  height: 70rem;
+}
+
+.clear-fix::after {
+  content: "";
+  max-width: 75rem;
+  display: block;
+}
+
+.background_el-one {
+  background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 25rem;
+  border-bottom-right-radius: 15rem;
+}
+
+.booking-text {
+  position: absolute;
+  top: 48rem;
+  left: 6rem;
+  text-align: center;
+  max-width: 26rem;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+.booking-text h1 {
+  margin-bottom: 1rem;
+}
+.booking-text p {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: var(--brightened-black);
+}
+.button {
+  margin-top: 2rem;
+}
+.btn {
+  background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+}
+.btn:link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.mobile-phone {
+  position: absolute;
+  background: var(--white);
+  width: 20rem;
+  left: 10rem;
+  top: 5rem;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+.mobile-phone {
+  box-shadow: 0 15px 18px 0 rgba(0, 0, 0, 0.2);
+}
+.mobile-background {
+  background: var(--darker-grey);
+  border-radius: 1rem;
+}
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* first element styles */
+/* first element styles */
+/* first element styles */
+
+.user-avatar {
+  width: 3rem;
+  border-radius: 2rem;
+}
+.sub-el-one {
+  background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem;
+  color: var(--white);
+}
+
+/* general styles for all elements */
+/* general styles for all elements */
+
+.el-container {
+  width: 12rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.animal-images {
+  display: flex;
+  justify-content: space-between;
+}
+.animal-images img {
+  width: 3rem;
+  border-radius: 1rem;
+}
+.el-two,
+.el-five,
+.el-six,
+.el-seven {
+  float: left;
+}
+.animal-images,
+.el-three,
+.el-four {
+  float: right;
+}
+
+/* general background styles */
+/* general background styles */
+
+.primary-el,
+.secondary-el,
+.el-five {
+  background: var(--Moderate-Violet);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.el-three,
+.el-four {
+  background: var(--white);
+}
+.el-six,
+.el-seven {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  color: var(--white);
+}
+.svg-text {
+  display: flex;
+  align-items: center;
+}
+.svg-text p {
+  margin-left: 0.6rem;
+}
+.icon {
+  fill: var(--white);
+}
+
+.textbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  clear: both;
+  padding: 0.5rem;
+  background: var(--white);
+  margin: 0.5rem;
+}
+.textbox p {
+  color: var(--Grayish-Blue);
+}
+
+@media (min-width: 23rem) {
+  .background_el-one {
+    width: 25rem;
+    height: 45rem;
+  }
+  .mobile-phone {
+    left: 20rem;
+  }
+  .booking-text {
+    left: 16rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .booking-text {
+    top: 23rem;
+    left: 40rem;
+  }
+  .background_el-one {
+    width: 20rem;
+    height: 45rem;
+  }
+  .mobile-phone {
+    top: 11rem;
+  }
+  .background_el-two {
+    background: var(--dark-grey);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20rem;
+    height: 45rem;
+    border-top-left-radius: 10rem;
+  }
+}
